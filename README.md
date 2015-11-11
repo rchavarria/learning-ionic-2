@@ -184,7 +184,7 @@ There are lots of resources in the [Ionic 2] page:
 - [Documentation about components]: http://ionicframework.com/docs/v2/components
 - [Documentation about devices API]: http://ionicframework.com/docs/v2/platform
 - [More resources]: http://ionicframework.com/docs/v2/resources/
-
+- **NEXT WEEK: TESTING THE APP WITH JASMINE (WELL, FIRST STEPS TO TEST THE APP)** -> https://angular.io/docs/ts/latest/testing/
 
 
 
