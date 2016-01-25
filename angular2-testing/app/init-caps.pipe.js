@@ -9,28 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var HeroDetailComponent;
+    var InitCapsPipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            HeroDetailComponent = (function () {
-                function HeroDetailComponent() {
+            InitCapsPipe = (function () {
+                function InitCapsPipe() {
                 }
-                HeroDetailComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-hero-detail',
-                        template: "\n    <div *ngIf=\"hero\">\n      <h2>{{ hero.name | initCaps }} is your current super hero!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n      </div>\n    </div>\n  ",
-                        inputs: ['hero']
-                    }), 
+                InitCapsPipe.prototype.transform = function (value) {
+                    return value.toLowerCase().replace(/(?:^|\s)[a-z]/g, function (m) { return m.toUpperCase(); });
+                };
+                InitCapsPipe = __decorate([
+                    core_1.Pipe({ name: 'initCaps' }), 
                     __metadata('design:paramtypes', [])
-                ], HeroDetailComponent);
-                return HeroDetailComponent;
+                ], InitCapsPipe);
+                return InitCapsPipe;
             })();
-            exports_1("HeroDetailComponent", HeroDetailComponent);
+            exports_1("InitCapsPipe", InitCapsPipe);
         }
     }
 });
-//# sourceMappingURL=hero-detail.component.js.map
+//# sourceMappingURL=init-caps.pipe.js.map
