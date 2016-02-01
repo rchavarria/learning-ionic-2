@@ -1,8 +1,6 @@
-class Hello {
+export class Hello {
   say() {
     return 'Hello'
   }
 }
-
-export Hello
 
